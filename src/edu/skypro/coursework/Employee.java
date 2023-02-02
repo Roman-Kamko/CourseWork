@@ -3,10 +3,10 @@ package edu.skypro.coursework;
 import java.util.Objects;
 
 public class Employee {
-    private String fullName;
+    private final String fullName;
     private int department;
     private int salary;
-    private int id;
+    private final int id;
     static int count;
 
     public Employee(String fullName, int department, int salary) {

@@ -51,20 +51,17 @@ public class Main {
         return employeeWithMinSalary;
     }
 
-    public static String findEmployeeWithMaxSalary() {
+    public static Employee findEmployeeWithMaxSalary() {
         double maxSalary = employeeBook[0].getSalary();
+        Employee employee = null;
         for (int i = 0; i < employeeBook.length; i++) {
             if (employeeBook[i].getSalary() > maxSalary) {
                 maxSalary = employeeBook[i].getSalary();
             }
-        }
-        String employeeWithMaxSalary = employeeBook[0].toString();
-        for (int i = 0; i < employeeBook.length; i++) {
             if (maxSalary == employeeBook[i].getSalary()) {
-                employeeWithMaxSalary = employeeBook[i].toString();
+                employee = employeeBook[i];
             }
-        }
-        return employeeWithMaxSalary;
+        return employee;
     }
 
 

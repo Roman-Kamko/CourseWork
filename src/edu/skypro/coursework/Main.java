@@ -21,31 +21,30 @@ public class Main {
     }
 
     public static void printAllEmployees() {
-        for (int i = 0; i < employeeBook.length; i++) {
-            Employee employee = employeeBook[i];
-            System.out.println(employeeBook[i].toString());
+        for (Employee employee : employeeBook) {
+            System.out.println(employee.toString());
         }
     }
 
     public static double calculateCostsAmountOnSalaries() {
         int sum = 0;
-        for (int i = 0; i < employeeBook.length; i++) {
-            sum += employeeBook[i].getSalary();
+        for (Employee employee : employeeBook) {
+            sum += employee.getSalary();
         }
         return sum;
     }
 
     public static String findEmployeeWithMinSalary() {
         double minSalary = employeeBook[0].getSalary();
-        for (int i = 0; i < employeeBook.length; i++) {
-            if (employeeBook[i].getSalary() < minSalary) {
-                minSalary = employeeBook[i].getSalary();
+        for (Employee value : employeeBook) {
+            if (value.getSalary() < minSalary) {
+                minSalary = value.getSalary();
             }
         }
         String employeeWithMinSalary = employeeBook[0].toString();
-        for (int i = 0; i < employeeBook.length; i++) {
-            if (minSalary == employeeBook[i].getSalary()) {
-                employeeWithMinSalary = employeeBook[i].toString();
+        for (Employee employee : employeeBook) {
+            if (minSalary == employee.getSalary()) {
+                employeeWithMinSalary = employee.toString();
             }
         }
         return employeeWithMinSalary;
@@ -54,13 +53,15 @@ public class Main {
     public static Employee findEmployeeWithMaxSalary() {
         double maxSalary = employeeBook[0].getSalary();
         Employee employee = null;
-        for (int i = 0; i < employeeBook.length; i++) {
-            if (employeeBook[i].getSalary() > maxSalary) {
-                maxSalary = employeeBook[i].getSalary();
+        for (Employee value : employeeBook) {
+            if (value.getSalary() > maxSalary) {
+                maxSalary = value.getSalary();
+                employee = value;
             }
-            if (maxSalary == employeeBook[i].getSalary()) {
-                employee = employeeBook[i];
-            }
+            /*if (maxSalary == value.getSalary()) {
+                employee = value;
+                break;
+            }*/
         }
         return employee;
     }

@@ -61,8 +61,7 @@ public class Main {
             if (maxSalary == employeeBook[i].getSalary()) {
                 employee = employeeBook[i];
             }
+        }
         return employee;
     }
-
-
 }

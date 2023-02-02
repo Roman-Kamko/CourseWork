@@ -52,4 +52,9 @@ public class Employee {
     public int hashCode() {
         return Objects.hash(fullName, id);
     }
+
+    @Override
+    public String toString() {
+        return "ФИО: " + getFullName() + ". id: " + getId() + ". Отдел: " + getDepartment() + ". Зарплата: " + getSalary();
+    }
 }

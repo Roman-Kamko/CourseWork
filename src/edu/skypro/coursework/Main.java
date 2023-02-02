@@ -23,7 +23,7 @@ public class Main {
     public static void printAllEmployees() {
         for (int i = 0; i < employeeBook.length; i++) {
             Employee employee = employeeBook[i];
-            System.out.println("ФИО: " + employee.getFullName() + ", id: " + employee.getId() + ", Отдел: " + employee.getDepartment() + ", Зарплата: " + employee.getSalary());
+            System.out.println(employeeBook[i].toString());
         }
     }
 
@@ -42,10 +42,10 @@ public class Main {
                 minSalary = employeeBook[i].getSalary();
             }
         }
-        String employeeWithMinSalary = null;
+        String employeeWithMinSalary = employeeBook[0].toString();
         for (int i = 0; i < employeeBook.length; i++) {
             if (minSalary == employeeBook[i].getSalary()) {
-                employeeWithMinSalary = employeeBook[i].getFullName();
+                employeeWithMinSalary = employeeBook[i].toString();
             }
         }
         return employeeWithMinSalary;
@@ -58,10 +58,10 @@ public class Main {
                 maxSalary = employeeBook[i].getSalary();
             }
         }
-        String employeeWithMaxSalary = null;
+        String employeeWithMaxSalary = employeeBook[0].toString();
         for (int i = 0; i < employeeBook.length; i++) {
             if (maxSalary == employeeBook[i].getSalary()) {
-                employeeWithMaxSalary = employeeBook[i].getFullName();
+                employeeWithMaxSalary = employeeBook[i].toString();
             }
         }
         return employeeWithMaxSalary;

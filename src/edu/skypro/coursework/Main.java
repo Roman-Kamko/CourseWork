@@ -23,6 +23,24 @@ public class Main {
 //        System.out.println("employeeBook.calculateAverageSalary() = " + employeeBook.calculateAverageSalary());
 //        employeeBook.printFullNameAllEmployees();
 
+//        employeeBook.indexSalary(10);
+//        employeeBook.printAllEmployees();
 
+//        System.out.println("employeeBook.findMaxSalaryInDepartment(5) = " + employeeBook.findMaxSalaryInDepartment(5));
+//        System.out.println("employeeBook.findMinSalaryInDepartment(5) = " + employeeBook.findMinSalaryInDepartment(5));
+//        System.out.println("employeeBook.calculateCostsAmountOnSalariesInDepartment(5) = " + employeeBook.calculateCostsAmountOnSalariesInDepartment(5));
+//        System.out.println(employeeBook.calculateAverageSalaryInDepartment(5));
+
+//        employeeBook.indexSalaryInDepartment(10, 5);
+//        employeeBook.printAllEmployeesInDepartment(5);
+
+//        employeeBook.printEmployeesIfTheySalaryLessThen(20_000);
+//        employeeBook.printEmployeesIfTheySalaryMoreThen(70_000);
+
+//        employeeBook.removeEmployeeByFullName("Иванов Иван Иванович");
+//        employeeBook.printAllEmployees();
+
+//        employeeBook.removeEmployeeById(6);
+//        employeeBook.printAllEmployees();
     }
 }

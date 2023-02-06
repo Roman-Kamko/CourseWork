@@ -9,7 +9,8 @@ public class EmployeeBook {
     }
 
     public void printAllEmployees() {
-        for (Employee employee : employees) {
+        for (int i = 0; i < size; i++) {
+            Employee employee = employees[i];
             System.out.println(employee);
         }
     }
@@ -149,7 +150,7 @@ public class EmployeeBook {
     public void removeEmployeeById(int id) {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i].getId() == id) {
-                System.out.println(employees[i].getFullName() + ". Id: " + employees[i].getId() + " удален");
+                System.out.println(employees[i].getFullName() + ". Id: " + employees[i].getId() + ", удален");
                 System.arraycopy(employees, i + 1, employees, i, size - i - 1);
                 employees[size - 1] = null;
                 size--;
@@ -161,7 +162,7 @@ public class EmployeeBook {
     public void removeEmployeeByFullName(String fullName) {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i].getFullName().equals(fullName)) {
-                System.out.println(employees[i].getFullName() + ". Id: " + employees[i].getId() + " удален");
+                System.out.println(employees[i].getFullName() + ". Id: " + employees[i].getId() + ", удален");
                 System.arraycopy(employees, i + 1, employees, i, size - i - 1);
                 employees[size - 1] = null;
                 size--;

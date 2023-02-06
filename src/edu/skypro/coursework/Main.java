@@ -42,5 +42,7 @@ public class Main {
 
 //        employeeBook.removeEmployeeById(6);
 //        employeeBook.printAllEmployees();
+
+        employeeBook.changeSalary("Антонов Антон Антонович", 1_500);
     }
 }

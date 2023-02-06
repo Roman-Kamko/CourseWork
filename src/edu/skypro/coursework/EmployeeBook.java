@@ -170,4 +170,13 @@ public class EmployeeBook {
             }
         }
     }
+
+    public void changeSalary(String fullName, double newSalary) {
+        for (int i = 0; i < size; i++) {
+            if (fullName.equals(employees[i].getFullName())) {
+                employees[i].setSalary(newSalary);
+                System.out.println(employees[i]);
+            }
+        }
+    }
 }

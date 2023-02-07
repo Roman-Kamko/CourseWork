@@ -157,6 +157,7 @@ public class EmployeeBook {
                 return;
             }
         }
+        System.out.println("Сотрудник с id " + id + " не найден");
     }
 
     public void removeEmployeeByFullName(String fullName) {
@@ -169,12 +170,34 @@ public class EmployeeBook {
                 return;
             }
         }
+        System.out.println("Сотрудник с ФИО " + fullName + " не найден");
     }
 
     public void changeSalary(String fullName, double newSalary) {
         for (int i = 0; i < size; i++) {
             if (fullName.equals(employees[i].getFullName())) {
                 employees[i].setSalary(newSalary);
+                System.out.println(employees[i]);
+                return;
+            }
+        }
+        System.out.println("Сотрудник с ФИО " + fullName + " не найден");
+    }
+
+    public void changeDepartment(String fullName, int newDepartment) {
+        for (int i = 0; i < size; i++) {
+            if (employees[i].getFullName().equals(fullName)) {
+                employees[i].setDepartment(newDepartment);
+                System.out.println(employees[i]);
+                return;
+            }
+        }
+        System.out.println("Сотрудник с ФИО " + fullName + " не найден");
+    }
+
+    public void printEmployeesInDepartment(int department) {
+        for (int i = 0; i < size; i++) {
+            if (employees[i].getDepartment() == department) {
                 System.out.println(employees[i]);
             }
         }
